@@ -1,8 +1,10 @@
 import React from "react";
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
-import Favicon from '/public/favicon.ico';
 import "./styles/_styles.scss";
+import Header from "@/app/components/Header/Header";
+import Footer from "@/app/components/Footer/Footer";
+import Favicon from '/public/favicon.ico';
 
 
 const inter = Inter({subsets: ["latin"]});
@@ -30,7 +32,11 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode; }>) {
     return (
      <html lang="en">
-     <body className={inter.className}>{children}</body>
+     <body className={inter.className}>
+     <Header/>
+     {children}
+     <Footer/>
+     </body>
      </html>
     );
 }
