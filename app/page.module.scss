@@ -1,0 +1,71 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+
+.title {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFF;
+  color: transparent;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 124px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 86px;
+
+  .secondLine {
+    font-size: 84px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 100px;
+  }
+
+  .thirdLine {
+    text-transform: lowercase;
+    font-size: 122px;
+    font-style: normal;
+    font-weight: 900;
+  }
+}
+
+.buttonScroll {
+  margin-top: 50px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  text-transform: uppercase;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: $background-white;
+  color: $text-black;
+  cursor: pointer;
+  @include transition(all 0.3s);
+  border: 2px solid transparent;
+  @include animation(rotate 2.5s linear infinite);
+
+  &:hover {
+    background-color: transparent;
+    color: $text-white;
+    border: 2px solid $border-white;
+    @include animation(none);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}

@@ -1,7 +1,7 @@
+import "@/styles/_styles.scss";
 import React from "react";
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
-import "@/styles/_styles.scss";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import Favicon from '/public/favicon.ico';
@@ -34,7 +34,9 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
      <html lang="en">
      <body className={inter.className}>
      <Header/>
-     {children}
+     <main className="main">
+         {children}
+     </main>
      <Footer/>
      </body>
      </html>
