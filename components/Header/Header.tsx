@@ -36,7 +36,6 @@ export default function Header() {
     const containerRef = useRef(null);
     const {height} = useDimensions(containerRef);
 
-    console.log(isOpen)
     const handleOpenMenu = () => {
         setOpenMenu(!openMenu);
         toggleOpen();
