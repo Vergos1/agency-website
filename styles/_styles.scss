@@ -7,7 +7,6 @@ html,
 body {
   min-height: 100%;
   max-width: 100vw;
-  overflow-x: hidden;
   background: url("../assets/images/main-background.svg") no-repeat top center $background-black;
   background-size: cover;
   color: $text-white;
@@ -37,6 +36,8 @@ body {
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .container {
