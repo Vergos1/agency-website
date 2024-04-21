@@ -23,6 +23,10 @@ button {
   cursor: pointer;
 }
 
+img {
+  object-fit: cover;
+}
+
 input, button, textarea {
   outline: none;
   box-shadow: none;
@@ -40,7 +44,7 @@ button:focus {
 *::after {
   font-family: $font-helvetica-cyrill;
   font-size: 14px;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
   margin: 0;
   padding: 0;
 }
@@ -86,6 +90,10 @@ body {
 
 ol, ul {
   list-style: none;
+}
+
+li {
+  list-style-type: none;
 }
 
 blockquote, q {

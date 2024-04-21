@@ -11,6 +11,12 @@
   justify-content: center;
 }
 
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @mixin flex-center-column {
   @include flex-center;
   flex-direction: column;
@@ -24,6 +30,11 @@
 @mixin flex-center-horiz {
   display: flex;
   justify-content: center;
+}
+
+@mixin gap($gap) {
+  display: grid;
+  gap: $gap;
 }
 
 /* ===== Usage ===== */
@@ -93,32 +104,39 @@
 
 /* ===== Usage ===== */
 //div {
-//  background-image: url("cute-doggo.png");
+//  background-images: url("cute-doggo.png");
 //  @include cover-background;
 //}
 
 
 //doc === media queries mixin === //
-//Since I have to google the @media syntax every single time,
-//this mixin comes in handy to handle breakpoints, add more as needed.
-$tablet: 768;
-$large: 1024;
-$desktop: 1280;
-
-@mixin tablet {
-  @media only screen and (min-width: $tablet * 1px) {
-    @content;
-  }
-}
-
-@mixin large {
-  @media only screen and (min-width: $large * 1px) {
-    @content;
-  }
-}
 
 @mixin desktop {
-  @media only screen and (min-width: $desktop * 1px) {
+  @media (max-width: (1260px)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: (991px)) {
+    @content;
+  }
+}
+
+@mixin tablet-sm {
+  @media (max-width: (740px)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: (600px)) {
+    @content;
+  }
+}
+
+@mixin mobile-sm {
+  @media (max-width: (480px)) {
     @content;
   }
 }
@@ -404,6 +422,14 @@ $breakpoints: (
 //  @include abs-position(100px, 0, 0, auto);
 //}
 
+//doc === transition mixin === //
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
 
 //doc === transform mixin === //
 @mixin transform($property) {

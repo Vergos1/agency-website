@@ -1,9 +1,9 @@
 import React from "react";
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
-import "./styles/_styles.scss";
-import Header from "@/app/components/Header/Header";
-import Footer from "@/app/components/Footer/Footer";
+import "@/styles/_styles.scss";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 import Favicon from '/public/favicon.ico';
 
 

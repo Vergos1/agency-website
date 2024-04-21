@@ -1,0 +1,57 @@
+@import "variables";
+@import "mixins";
+@import "reset";
+@import "normalize";
+
+html,
+body {
+  min-height: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: url("../assets/images/main-background.svg") no-repeat top center $background-black;
+  background-size: cover;
+  color: $text-white;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: white;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 100px 0;
+  max-width: 1280px;
+  width: 100%;
+
+  @include desktop {
+    max-width: 932px;
+  }
+
+  @include tablet {
+    max-width: 728px;
+  }
+
+  @include tablet-sm {
+    max-width: calc(100% - 40px);
+  }
+}
+
+.page-container {
+  padding: 0 2%;
+}
+
+// components
