@@ -1,5 +1,6 @@
-//doc: === flex mixins === //
+@import "variables";
 
+//doc: === flex mixins === //
 @mixin flex-column {
   display: flex;
   flex-direction: column;
@@ -14,6 +15,11 @@
 @mixin flex-between {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-around {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -37,15 +43,35 @@
   gap: $gap;
 }
 
-/* ===== Usage ===== */
-//.vertical-centered-element {
-//  @include flex-center-vert;
-//}
-//
-//.horizontally-centered-element {
-//  flex-direction: column;
-//  @include flex-center-vert;
-//}
+//doc: === text-styles === //
+@mixin default-text {
+  color: $text-light-grey;
+  font-family: $font-helvetica-cyrill;
+  font-size: $font-size-medium;
+  font-style: normal;
+  font-weight: $font-weight-regular;
+  line-height: 150%;
+}
+
+@mixin section-title-bold {
+  color: $text-white;
+  font-family: $font-helvetica-cyrill;
+  font-size: $font-size-ultra-huge;
+  font-style: normal;
+  font-weight: $font-weight-bold;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+@mixin section-title-regular {
+  color: $text-white;
+  font-family: $font-helvetica-cyrill;
+  font-size: $font-size-ultra-huge;
+  font-style: normal;
+  font-weight: $font-weight-regular;
+  line-height: 100%;
+  text-transform: uppercase;
+}
 
 
 //doc: === font-size mixin === //
@@ -110,6 +136,12 @@
 
 
 //doc === media queries mixin === //
+
+@mixin large-desktop {
+  @media (min-width: (1920px)) {
+    @content;
+  }
+}
 
 @mixin desktop {
   @media (max-width: (1260px)) {

@@ -1,9 +1,14 @@
-@import "../../../styles/mixins";
-@import "../../../styles/variables";
+@import "@/styles/mixins";
+@import "@/styles/variables";
 
 .dropdown {
   position: relative;
-  z-index: 10;
+  z-index: $z-index-very-important;
+}
+
+.icon {
+  cursor: pointer;
+  @include transition($transition-default);
 }
 
 .dropdownButton {

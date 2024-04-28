@@ -1,6 +1,6 @@
 "use client";
-import {useRef, useState} from "react";
 import s from "./header.module.scss";
+import {useRef, useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {motion, useCycle} from "framer-motion";

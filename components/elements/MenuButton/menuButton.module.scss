@@ -10,7 +10,7 @@
   line-height: normal;
   text-transform: uppercase;
   position: relative;
-  z-index: 10;
+  z-index: $z-index-very-important;
 
   &:hover .bar:nth-child(2) {
     width: 100%;

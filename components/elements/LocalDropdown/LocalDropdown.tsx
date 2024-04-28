@@ -2,6 +2,7 @@
 import React, {useRef, useState} from "react";
 import s from "./localDropdown.module.scss";
 import Image from "next/image";
+import {motion, AnimatePresence} from "framer-motion";
 import useClickAway from "@/hooks/useOutsideClick";
 import ChevronIcon from "@/assets/icons/chevron.svg";
 
@@ -35,22 +36,35 @@ export default function LocalDropdown() {
      <button ref={clickRef} className={s.dropdown} onClick={handleOpenDropdown}>
          <div className={s.dropdownButton}>
              {language}
-             <Image src={ChevronIcon} alt="arrow"/>
+             <Image
+              style={{
+                  transform: open ? "rotate(180deg)" : "rotate(0deg)"
+              }}
+              className={s.icon}
+              src={ChevronIcon}
+              alt="arrow"/>
          </div>
-         {open && (
-          <ul className={s.list}>
-              {languages.map((language, index) => (
-               <li key={index} className={s.item}>
+         <AnimatePresence>
+             {open && (
+              <motion.ul
+               initial={{opacity: 0, y: -2}}
+               animate={{opacity: 1, y: 0}}
+               exit={{opacity: 0, y: -2}}
+               className={s.list}
+              >
+                  {languages.map((language, index) => (
+                   <li key={index} className={s.item}>
                    <span
                     onClick={handleSelectLanguage}
                     className={s.button}
                    >
                        {language}
                    </span>
-               </li>
-              ))}
-          </ul>
-         )}
+                   </li>
+                  ))}
+              </motion.ul>
+             )}
+         </AnimatePresence>
      </button>
     )
 }

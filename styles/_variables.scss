@@ -11,6 +11,10 @@ $ultra-black: #090909;
 
 // >>>> text colors <<<<
 $text-white: $white;
+$text-light-grey: $light-grey;
+$text-grey: $grey;
+$text-dark-grey: $dark-grey;
+$text-blue: $blue;
 $text-black: $black;
 
 // >>>> input text colors <<<<
@@ -21,6 +25,7 @@ $input-black: $black;
 $link-secondary: $blue;
 $link-tertiary: $grey;
 $link-white: $white;
+
 
 // >>>> button text colors <<<<
 $button-white: $white;
@@ -39,6 +44,8 @@ $border-grey: $grey;
 $border-graphite: $graphite;
 
 // >>>> link transitions <<<<
+$transition-default: 0.15s ease-in-out;
+$transition-default-default: 0.25s ease-in-out;
 $transition-link: 0.15s ease-in-out;
 $transition-background-link: background-color 0.25s ease-in-out;
 
@@ -66,6 +73,15 @@ $font-weight-black: 900;
 // >>>> radius <<<<
 $radius-button: 5px;
 $radius-tab: 5px;
+
+// >>>> z-index <<<<
+$z-index-first: 1;
+$z-index-second: 2;
+$z-index-third: 3;
+$z-index-fourth: 4;
+$z-index-modal: 5;
+$z-index-very-important: 6;
+
 
 // >>>> fonts <<<<
 $font-helvetica-neue: 'Helvetica Neue', Helvetica, Arial, sans-serif;
