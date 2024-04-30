@@ -455,12 +455,12 @@ $breakpoints: (
 //}
 
 //doc === transition mixin === //
-@mixin transition($transition) {
-  -webkit-transition: $transition;
-  -moz-transition: $transition;
-  -ms-transition: $transition;
-  -o-transition: $transition;
-  transition: $transition;
+@mixin transition($transition, $transitionSecond: null) {
+  -webkit-transition: $transition, $transitionSecond;
+  -moz-transition: $transition, $transitionSecond;
+  -ms-transition: $transition, $transitionSecond;
+  -o-transition: $transition, $transitionSecond;
+  transition: $transition, $transitionSecond;
 }
 
 //doc === transform mixin === //

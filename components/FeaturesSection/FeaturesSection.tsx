@@ -11,6 +11,8 @@ const FeaturesSection = () => {
               title="We have been designing, creating, and maintaining it-products since 2019. We provide full-cycle services - from planning and evaluating an idea to launching a product."
               subtitle="About us"
               titleMaxWidth="75%"
+              buttonText="view all works"
+              url="/"
              />
              <div className={s.wrapper}>
 

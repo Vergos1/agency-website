@@ -8,6 +8,7 @@ import Button, {ButtonProps} from "@/components/elements/Button/Button";
  * @interface SectionHeaderProps
  * @extends {TitleProps} - The properties from the Title component.
  * @extends {ButtonProps} - The properties from the Button component.
+ * @property {string} mb - The margin-bottom CSS property.
  * @property {string} buttonClassName - The CSS(module) class to apply to the button.
  * @property {string} buttonText - The text to display on the button.
  * */
@@ -15,6 +16,7 @@ interface SectionHeaderProps
  extends TitleProps, ButtonProps {
     buttonClassName?: string;
     buttonText?: string;
+    mb?: string;
 }
 
 
@@ -32,13 +34,23 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
                                                          subtitlePosition = "top",
                                                          titleFontSize = "32px",
                                                          titleMaxWidth = "max-content",
+                                                         mb = "40px",
+                                                         variant,
                                                          buttonClassName,
+                                                         iconVisible,
                                                          onClick,
                                                          url,
-                                                         buttonText = "buttonText",
+                                                         buttonText,
                                                      }: SectionHeaderProps): JSX.Element => {
+    const wrapperStyle = {
+        marginBottom: mb,
+    }
+
     return (
-     <div className={s.wrapper}>
+     <div
+      style={wrapperStyle}
+      className={s.wrapper}
+     >
          <Title
           title={title}
           subtitle={subtitle}
@@ -52,6 +64,8 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
            url={url}
            onClick={onClick}
            className={buttonClassName}
+           variant={variant}
+           iconVisible={iconVisible}
           >
               {buttonText}
           </Button>

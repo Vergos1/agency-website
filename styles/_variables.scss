@@ -37,6 +37,10 @@ $background-white: $white;
 $background-grey: $grey;
 $background-ultra-black: $ultra-black;
 
+// >>>> icon colors <<<<
+$icon-white: $white;
+$icon-black: $black;
+
 // >>>> border colors <<<<
 $border-white: $white;
 $border-black: $black;
@@ -48,6 +52,8 @@ $transition-default: 0.15s ease-in-out;
 $transition-default-default: 0.25s ease-in-out;
 $transition-link: 0.15s ease-in-out;
 $transition-background-link: background-color 0.25s ease-in-out;
+$transition-border-link: border 0.25s ease-in-out;
+$transition-all-link: all 0.25s ease-in-out;
 
 // >>>> font-size <<<<
 $font-size-ultra-small: 12px;
