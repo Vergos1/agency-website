@@ -2,10 +2,12 @@
 import React from 'react';
 import s from './footer.module.scss';
 import Link from "next/link";
-import ArrowIcon from "@/assets/icons/arrow-sprite.svg";
 import Image from "next/image";
+import ArrowIcon from "@/assets/icons/arrow-sprite.svg";
+import {FooterLinksType} from "@/components/Footer/footer.types";
 
-const pagesLinks = [
+
+const pagesLinks: FooterLinksType[] = [
     {
         title: "Home",
         link: "/"
@@ -23,7 +25,7 @@ const pagesLinks = [
         link: "/"
     },
 ];
-const phonesLinks = [
+const phonesLinks: FooterLinksType[] = [
     {
         number: "+38 (066) 363 35 31",
         link: "+380663633531"
@@ -33,7 +35,7 @@ const phonesLinks = [
         link: "+380960113033"
     }
 ];
-const messengersLinks = [
+const messengersLinks: FooterLinksType[] = [
     {
         title: "Telegram",
         link: "https://t.me/vinartstudio"

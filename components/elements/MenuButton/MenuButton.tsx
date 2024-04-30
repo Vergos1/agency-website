@@ -1,11 +1,12 @@
-import React, {useState} from "react";
+import React from "react";
 import s from "./menuButton.module.scss";
 
-type Props = {
+interface MenuButtonProps {
     handler: () => void;
     open: boolean;
 }
-const MenuButton: React.FC<Props> = ({handler, open}) => {
+
+const MenuButton: React.FC<MenuButtonProps> = ({handler, open}) => {
     return (
      <button
       onClick={handler}
