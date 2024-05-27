@@ -12,10 +12,11 @@ const FeaturesSection = () => {
               subtitle="About us"
               titleMaxWidth="75%"
               buttonText="view all works"
+              mb="70px"
               url="/"
              />
              <div className={s.wrapper}>
-
+                 test text
              </div>
          </div>
      </section>

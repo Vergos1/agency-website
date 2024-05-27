@@ -1,8 +1,7 @@
-import React from "react";
-import s from "./button.module.scss";
-import Link from "next/link";
-import LinkIcon from "@/components/icons/LinkIcon";
-
+import React from 'react';
+import s from './button.module.scss';
+import Link from 'next/link';
+import LinkIcon from '@/assets/icons/link-arrow.svg';
 
 /**
  * @interface ButtonProps
@@ -14,12 +13,12 @@ import LinkIcon from "@/components/icons/LinkIcon";
  * @property {string} [url] - The URL to navigate to when the button is clicked. If provided, the button will be rendered as a link.
  * */
 export interface ButtonProps {
-    children?: React.ReactNode;
-    variant?: "primary" | "secondary" | "unstyled";
-    iconVisible?: boolean;
-    className?: string;
-    onClick?: () => void;
-    url?: string;
+  children?: React.ReactNode;
+  variant?: 'primary' | 'secondary' | 'unstyled';
+  iconVisible?: boolean;
+  className?: string;
+  onClick?: () => void;
+  url?: string;
 }
 
 /**
@@ -33,46 +32,34 @@ export interface ButtonProps {
  * @returns {JSX.Element} The Button component.
  */
 const Button: React.FC<ButtonProps> = ({
-                                           children,
-                                           variant = "primary",
-                                           iconVisible = true,
-                                           className,
-                                           onClick,
-                                           url,
-                                       }: ButtonProps): JSX.Element => {
-    return (
-     <>
-         {url ? (
-          <Link
-           href={url}
-           className={`${s.button} ${className} ${s[variant]}`}
-          >
-              {children}
-              {iconVisible && (
-               <LinkIcon className={s.icon}/>
-              )}
-          </Link>
-         ) : (
-          <button
-           onClick={onClick}
-           className={`${s.button} ${className} ${s[variant]}`}
-          >
-              {children}
-              {iconVisible && (
-               <span className={s.icon}>
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                          <path d="M0 0h24v24H0z" fill="none"/>
-                          <path
-                           fill="currentColor"
-                           d="M17.66 7.93l-5.66 5.66-5.66-5.66L5 9.5l7 7 7-7z"
-                          />
-                     </svg>
-                </span>
-              )}
-          </button>
-         )}
-     </>
-    );
-}
+  children,
+  variant = 'primary',
+  iconVisible = true,
+  className,
+  onClick,
+  url,
+}: ButtonProps): JSX.Element => {
+  return (
+    <>
+      {url ? (
+        <Link
+          href={url}
+          className={`${s.button} ${className} ${s[variant]}`}
+        >
+          {children}
+          {iconVisible && <LinkIcon className={s.icon} />}
+        </Link>
+      ) : (
+        <button
+          onClick={onClick}
+          className={`${s.button} ${className} ${s[variant]}`}
+        >
+          {children}
+          {iconVisible && <LinkIcon className={s.icon} />}
+        </button>
+      )}
+    </>
+  );
+};
 
 export default Button;
