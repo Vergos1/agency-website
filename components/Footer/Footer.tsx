@@ -4,50 +4,13 @@ import s from './footer.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
 import ArrowIcon from '@/assets/icons/arrow-sprite.svg';
-import { FooterLinksType } from '@/components/Footer/footer.types';
+import { AppRoutes } from '@/utils/types/app.types';
+import {
+  messengersLinks,
+  navigationLinks,
+  phonesListLinks,
+} from '@/utils/constants/data.constants';
 
-const pagesLinks: FooterLinksType[] = [
-  {
-    title: 'Home',
-    link: '/',
-  },
-  {
-    title: 'Portfolio',
-    link: '/',
-  },
-  {
-    title: 'About Us',
-    link: '/',
-  },
-  {
-    title: 'Services',
-    link: '/',
-  },
-];
-const phonesLinks: FooterLinksType[] = [
-  {
-    number: '+38 (066) 363 35 31',
-    link: '+380663633531',
-  },
-  {
-    number: '+38 (096) 011 30 33',
-    link: '+380960113033',
-  },
-];
-const messengersLinks: FooterLinksType[] = [
-  {
-    title: 'Telegram',
-    link: 'https://t.me/vinartstudio',
-  },
-  {
-    title: 'WhatsApp',
-    link: 'https://wa.me/380663633531',
-  },
-  {
-    title: 'Viber',
-    link: 'viber://chat?number=+380663633531',
-  },
-];
 export default function Footer() {
   return (
     <footer className={s.footer}>
@@ -71,7 +34,7 @@ export default function Footer() {
               <div className={s.navLinks}>
                 <span className={s.navTitle}>pages</span>
                 <div className={s.linksWrapper}>
-                  {pagesLinks.map((item, index) => (
+                  {navigationLinks.map((item, index) => (
                     <Link
                       key={index}
                       href={item.link}
@@ -85,7 +48,7 @@ export default function Footer() {
               <div className={s.navLinks}>
                 <span className={s.navTitle}>phones</span>
                 <div className={s.linksWrapper}>
-                  {phonesLinks.map((item, index) => (
+                  {phonesListLinks.map((item, index) => (
                     <a
                       key={index}
                       href={`tel:${item.link}`}
@@ -104,6 +67,7 @@ export default function Footer() {
                       key={index}
                       href={item.link}
                       className={s.link}
+                      target="_blank"
                     >
                       {item.title}
                     </a>
@@ -118,11 +82,11 @@ export default function Footer() {
         <div className={s.container}>
           <div className={s.bottomWrapper}>
             <div className={s.links}>
-              <Link className={s.link} href={'/'}>
+              <Link className={s.link} href={AppRoutes.home}>
                 Terms & Conditions
               </Link>
               |
-              <Link className={s.link} href={'/'}>
+              <Link className={s.link} href={AppRoutes.home}>
                 Privacy Policy
               </Link>
             </div>

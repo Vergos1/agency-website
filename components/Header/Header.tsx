@@ -8,6 +8,8 @@ import { useDimensions } from '@/utils/hooks/useDimensions';
 import LocalDropdown from '@/components/elements/LocalDropdown/LocalDropdown';
 import MenuButton from '@/components/elements/MenuButton/MenuButton';
 import Logo from '@/assets/icons/logo.svg';
+import { AppRoutes } from '@/utils/types/app.types';
+import { navigationLinks } from '@/utils/constants/data.constants';
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -31,6 +33,7 @@ const sidebar = {
     },
   },
 };
+
 export default function Header() {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const [isOpen, toggleOpen] = useCycle(false, true);
@@ -45,33 +48,18 @@ export default function Header() {
   return (
     <header className={s.header}>
       <div className={s.container}>
-        <Logo className={s.image} />
+        <Link href={AppRoutes.home}>
+          <Logo className={s.image} />
+        </Link>
+
         <nav className={s.navigation}>
-          <li className={s.listItem}>
-            <a href="/" className={s.link}>
-              home
-            </a>
-          </li>
-          <li className={s.listItem}>
-            <Link href="/" className={s.link}>
-              portfolio
-            </Link>
-          </li>
-          <li className={s.listItem}>
-            <Link href="/" className={s.link}>
-              about us
-            </Link>
-          </li>
-          <li className={s.listItem}>
-            <Link href="/" className={s.link}>
-              services
-            </Link>
-          </li>
-          <li className={s.listItem}>
-            <Link href="/" className={s.link}>
-              contacts
-            </Link>
-          </li>
+          {navigationLinks.map((item, index) => (
+            <li key={index} className={s.listItem}>
+              <Link href={item.link} className={s.link}>
+                {item.title}
+              </Link>
+            </li>
+          ))}
         </nav>
         <div className={s.rightContent}>
           <LocalDropdown />
