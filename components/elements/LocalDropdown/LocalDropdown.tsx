@@ -12,8 +12,6 @@ export default function LocalDropdown() {
   const [language, setLanguage] = useState<string>('ua');
   const clickRef = useRef<HTMLButtonElement>(null);
 
-  console.log(language);
-
   useClickAway(clickRef, () => {
     setOpen(false);
   });
@@ -41,13 +39,11 @@ export default function LocalDropdown() {
     >
       <div className={s.dropdownButton}>
         {language}
-        <Image
+        <ChevronIcon
           style={{
             transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
           }}
           className={s.icon}
-          src={ChevronIcon}
-          alt="arrow"
         />
       </div>
       <AnimatePresence>
