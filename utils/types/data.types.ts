@@ -17,3 +17,11 @@ export type PortfolioDataType = {
   link: string;
   image: StaticImageData;
 };
+
+export type CommentsDataType = {
+  id: number;
+  name: string;
+  location: string;
+  stars: number;
+  comment: string;
+};

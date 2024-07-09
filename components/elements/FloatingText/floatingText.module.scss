@@ -1,0 +1,20 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.floatingContainer {
+    padding: 50px 0;
+    display: flex;
+    gap: 40%;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.floatingText {
+    font-size: $font-size-epic;
+    font-style: normal;
+    font-weight: $font-weight-black;
+    color: $text-ultra-dark-grey;
+    overflow: hidden;
+    white-space: nowrap;
+}

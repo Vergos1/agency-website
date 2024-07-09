@@ -1,5 +1,5 @@
 import s from './featuresSection.module.scss';
-import Title from '@/components/Title/Title';
+import Title from '@/components/elements/Title/Title';
 import SectionHeader from '@/components/SectionHeader/SectionHeader';
 import { featuresData } from '@/utils/constants/data.constants';
 import { FeaturesBlocks } from '../FeaturesBlocks/FeaturesBlocks';

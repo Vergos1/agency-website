@@ -1,208 +1,209 @@
-@import "@/styles/variables.scss";
-@import "@/styles/mixins.scss";
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
 
 .hero {
-    min-height: calc(100vh - 71px);
-    width: 100%;
-    max-width: 1920px;
-    border-bottom: 1px solid $border-graphite;
-    overflow: hidden;
+  min-height: calc(100vh - 71px);
+  width: 100%;
+  max-width: 1920px;
+  border-bottom: 1px solid $border-graphite;
+  overflow: hidden;
 
-    @include large-desktop {
-        min-height: auto;
-    }
+  @include large-desktop {
+    min-height: auto;
+  }
 }
 
 .title {
-    position: relative;
-    z-index: $z-index-second;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #FFF;
-    color: transparent;
-    font-family: "Helvetica Neue", sans-serif;
-    font-size: $font-size-titanic;
+  position: relative;
+  z-index: $z-index-second;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+  color: transparent;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: $font-size-titanic;
+  font-style: normal;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  line-height: 86px;
+
+  .secondLine {
+    font-size: $font-size-gigantic;
     font-style: normal;
-    font-weight: $font-weight-bold;
-    text-transform: uppercase;
-    line-height: 86px;
+    font-weight: $font-weight-black;
+    line-height: 100px;
+  }
 
-    .secondLine {
-        font-size: $font-size-gigantic;
-        font-style: normal;
-        font-weight: $font-weight-black;
-        line-height: 100px;
-    }
-
-    .thirdLine {
-        text-transform: lowercase;
-        font-style: normal;
-        font-weight: $font-weight-black;
-    }
+  .thirdLine {
+    text-transform: lowercase;
+    font-style: normal;
+    font-weight: $font-weight-black;
+  }
 }
 
 .wrapper {
-    @include gap(20px);
-    grid-template-columns: 1fr 33%;
+  @include gap(20px);
+  grid-template-columns: 1fr 33%;
 }
 
 .item {
-    &:nth-child(2) {
-        display: grid;
-        place-items: flex-end;
-        position: relative;
+  &:nth-child(2) {
+    display: grid;
+    place-items: flex-end;
+    position: relative;
 
-        &:after {
-            content: "";
-            position: absolute;
-            top: -35%;
-            right: 0;
-            opacity: 0.55;
-            width: 900px;
-            height: 750px;
-            z-index: $z-index-first;
-            background: url("../../assets/icons/sheets.svg") no-repeat center center;
-        }
+    &:after {
+      content: '';
+      position: absolute;
+      top: -35%;
+      right: 0;
+      opacity: 0.55;
+      width: 900px;
+      height: 750px;
+      z-index: $z-index-first;
+      background: url('../../assets/icons/sheets.svg') no-repeat
+        center center;
     }
+  }
 
-    .playVideoButton {
-        place-self: flex-end;
-        align-self: flex-start;
-        position: relative;
-        z-index: $z-index-second;
-        @include gap(10px);
-        place-items: center;
-        padding: 32px 28px;
-        border: 1px dashed $border-grey;
-        background: #0E0E0E;
-
-        .play {
-            width: 24px;
-            height: 24px;
-        }
-    }
-
-    .buttonText {
-        color: #FFF;
-        font-family: $font-helvetica-cyrill;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: $font-weight-light;
-        line-height: normal;
-        text-transform: uppercase;
-    }
-
-    .description {
-        position: relative;
-        z-index: $z-index-second;
-        font-size: $font-size-medium;
-        font-style: normal;
-        font-weight: $font-weight-regular;
-        line-height: 140%;
-        text-transform: uppercase;
-        color: $text-light-grey;
-    }
-}
-
-.buttonScroll {
+  .playVideoButton {
+    place-self: flex-end;
+    align-self: flex-start;
     position: relative;
     z-index: $z-index-second;
-    margin-top: 32px;
+    @include gap(10px);
+    place-items: center;
+    padding: 32px 28px;
+    border: 1px dashed $border-grey;
+    background: #0e0e0e;
+
+    .play {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .buttonText {
+    color: #fff;
+    font-family: $font-helvetica-cyrill;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: $font-weight-light;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  .description {
+    position: relative;
+    z-index: $z-index-second;
     font-size: $font-size-medium;
     font-style: normal;
     font-weight: $font-weight-regular;
     line-height: 140%;
     text-transform: uppercase;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: transparent;
-    color: $text-white;
-    cursor: pointer;
-    @include transition(all 0.3s);
-    border: 2px dashed $border-white;
-    @include animation(scale 1s linear infinite);
+    color: $text-light-grey;
+  }
+}
 
-    &:hover {
-        background-color: $background-white;
-        color: $text-black;
-        border: 2px dashed transparent;
-        @include animation(none);
-    }
+.buttonScroll {
+  position: relative;
+  z-index: $z-index-second;
+  margin-top: 32px;
+  font-size: $font-size-medium;
+  font-style: normal;
+  font-weight: $font-weight-regular;
+  line-height: 140%;
+  text-transform: uppercase;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: $text-white;
+  cursor: pointer;
+  @include transition(all 0.3s);
+  border: 2px dashed $border-white;
+  @include animation(scale 1s linear infinite);
+
+  &:hover {
+    background-color: $background-white;
+    color: $text-black;
+    border: 2px dashed transparent;
+    @include animation(none);
+  }
 }
 
 .background {
-    position: fixed;
-    z-index: $z-index-very-important;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: $z-index-very-important;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .closeButton {
-    position: fixed;
-    z-index: $z-index-very-important;
-    top: 50px;
-    right: 50px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px dashed $border-white;
-    background-color: transparent;
-    @include flex-center;
-    cursor: pointer;
-    @include animation(scale 1s linear infinite);
-    @include transition(all 0.3s);
+  position: fixed;
+  z-index: $z-index-very-important;
+  top: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px dashed $border-white;
+  background-color: transparent;
+  @include flex-center;
+  cursor: pointer;
+  @include animation(scale 1s linear infinite);
+  @include transition(all 0.3s);
 
-    &:hover {
-        @include animation(none);
-        background-color: $background-white;
+  &:hover {
+    @include animation(none);
+    background-color: $background-white;
 
-        path,
-        svg {
-            fill: $icon-black;
-        }
+    path,
+    svg {
+      fill: $icon-black;
     }
+  }
 }
 
 .videoWrapper {
-    @include flex-center;
-    position: relative;
-    z-index: $z-index-modal-third;
-    width: 100%;
-    height: 100%;
+  @include flex-center;
+  position: relative;
+  z-index: $z-index-modal-third;
+  width: 100%;
+  height: 100%;
 
-    .video {
-        height: 80%;
-    }
+  .video {
+    height: 80%;
+  }
 }
 
 @keyframes scale {
-    0% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
 
-    50% {
-        transform: scale(1.035);
-    }
+  50% {
+    transform: scale(1.035);
+  }
 
-    100% {
-        transform: scale(1);
-    }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @-webkit-keyframes scale {
-    0% {
-        -webkit-transform: scale(1);
-    }
+  0% {
+    -webkit-transform: scale(1);
+  }
 
-    50% {
-        -webkit-transform: scale(1.035);
-    }
+  50% {
+    -webkit-transform: scale(1.035);
+  }
 
-    100% {
-        -webkit-transform: scale(1);
-    }
+  100% {
+    -webkit-transform: scale(1);
+  }
 }

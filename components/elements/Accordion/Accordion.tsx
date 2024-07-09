@@ -22,7 +22,7 @@ const Accordion: React.FC<AccordionProps> = ({
   description = 'Description',
 }) => {
   return (
-    <AnimatePresence>
+    <div className={s.accordionWrapper}>
       <motion.button
         onClick={toggle}
         key="question"
@@ -40,6 +40,8 @@ const Accordion: React.FC<AccordionProps> = ({
             <ChevronIcon className={s.icon} />
           </span>
         </div>
+      </motion.button>
+      <AnimatePresence>
         {isOpen && (
           <motion.div
             key="answer"
@@ -49,8 +51,8 @@ const Accordion: React.FC<AccordionProps> = ({
             <p className={s.description}>{description}</p>
           </motion.div>
         )}
-      </motion.button>
-    </AnimatePresence>
+      </AnimatePresence>
+    </div>
   );
 };
 export default Accordion;

@@ -26,11 +26,10 @@
     gap: 40px;
 }
 
-.accordion {
-    height: max-content;
-    @include gap(32px);
-    width: 100%;
+.accordionWrapper {
     padding: 32px;
+    width: 100%;
+    @include gap(32px);
     border: 1px solid $border-ultra-dark-grey;
 }
 

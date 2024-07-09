@@ -1,11 +1,11 @@
 // >>>> default colors <<<<
 $white: #ffffff;
-$grey: #B0B0B0;
-$light-grey: #E4E4E6;
-$dark-grey: #7B7B7B;
-$ultra-dark-grey: #1D1D1D;
-$black-ultra-dark-grey: #1E1E1E;
-$graphite: #1C1C21;
+$grey: #b0b0b0;
+$light-grey: #e4e4e6;
+$dark-grey: #7b7b7b;
+$ultra-dark-grey: #1d1d1d;
+$black-ultra-dark-grey: #1e1e1e;
+$graphite: #1c1c21;
 $blue: #82d2e5;
 $black: #262626;
 $ultra-black: #090909;
@@ -18,6 +18,7 @@ $text-grey: $grey;
 $text-dark-grey: $dark-grey;
 $text-blue: $blue;
 $text-black: $black;
+$text-ultra-dark-grey: $ultra-dark-grey;
 
 // >>>> input text colors <<<<
 $input-white: $white;
@@ -27,7 +28,6 @@ $input-black: $black;
 $link-secondary: $blue;
 $link-tertiary: $grey;
 $link-white: $white;
-
 
 // >>>> button text colors <<<<
 $button-white: $white;
@@ -73,6 +73,7 @@ $font-size-ultra-huge: 32px;
 $font-size-massive: 48px;
 $font-size-gigantic: 84px;
 $font-size-titanic: 124px;
+$font-size-epic: 144px;
 
 // >>>> font-weight <<<<
 $font-weight-light: 300;
@@ -97,8 +98,6 @@ $z-index-modal-second: 6;
 $z-index-modal-third: 7;
 $z-index-very-important: 8;
 
-
 // >>>> fonts <<<<
 $font-helvetica-neue: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-helvetica-cyrill: 'Helvetica CY', Helvetica, Arial, sans-serif;
-$font-poppins: 'Poppins', sans-serif;

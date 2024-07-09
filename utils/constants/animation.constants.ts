@@ -1,3 +1,5 @@
+import { Variants } from 'framer-motion';
+
 export const burgerAnimation = {
   open: (height = 1000) => ({
     clipPath: `circle(${
@@ -42,30 +44,54 @@ export const videoAnimation = {
   },
 };
 
-// ACCORDION ANIMATION
+/**
+ * * Анімації для компоненту акордеону.
+ * * Включає анімації для кнопки та змісту акордеону.
+ */
+
+// Анімація для кнопки акордеону.
 export const buttonAnimation = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
+  initial: { opacity: 0 }, // Початковий стан: прозорість 0.
+  animate: { opacity: 1 }, // Анімований стан: прозорість 1.
+  exit: { opacity: 0 }, // Стан при виході: прозорість 0.
 };
 
+// Анімація для змісту акордеону.
 export const contentAnimation = {
-  initial: { opacity: 0, maxHeight: 0 },
+  initial: { opacity: 0, maxHeight: 0 }, // Початковий стан: прозорість 0, максимальна висота 0.
   animate: {
-    opacity: 1,
-    maxHeight: 500,
+    opacity: 1, // Анімований стан: прозорість 1.
+    maxHeight: 500, // Розгортання до максимальної висоти 500px.
     transition: {
-      opacity: { duration: 0.5 },
-      maxHeight: { duration: 0.5, delay: 0.1 },
+      opacity: { duration: 0.15 }, // Тривалість анімації прозорості 0.15 секунд.
+      maxHeight: { duration: 0.25, delay: 0.05 }, // Тривалість анімації максимальної висоти 0.25 секунд із затримкою 0.05 секунд.
     },
   },
   exit: {
-    opacity: 0,
-    maxHeight: 0,
+    opacity: 0, // Стан при виході: прозорість 0.
+    maxHeight: 0, // Згортання до мінімальної висоти 0px.
     transition: {
-      opacity: { duration: 0.3 },
-      maxHeight: { delay: 0, duration: 0.3 },
+      opacity: { duration: 0.2 }, // Тривалість анімації прозорості 0.2 секунд.
+      maxHeight: { duration: 0.35, delay: 0.05 }, // Тривалість анімації максимальної висоти 0.35 секунд із затримкою 0.05 секунд.
     },
   },
 };
-//
+
+/**
+ * * Конфігурація анімації для плаваючого тексту.
+ * * Використовується з `framer-motion` для створення ефекту нескінченного прокручування тексту.
+ */
+export const scrollTextVariants: Variants = {
+  animate: {
+    // Початкова та кінцева позиція анімації по осі X.
+    x: ['100vw', '-200vw'],
+    transition: {
+      x: {
+        repeat: Infinity, // Анімація повторюється нескінченно.
+        repeatType: 'loop', // Анімація повторюється у циклі.
+        duration: 25, // Тривалість анімації в секундах.
+        ease: 'linear', // Рівномірний рух анімації.
+      },
+    },
+  },
+};

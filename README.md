@@ -23,6 +23,7 @@ Clone the repository and run the following command to start the development serv
 [git clone https://github.com/Vergos1/pet-project_BinPackager.git](https://github.com/Vergos1/pet-project_BinPackager.git)
 
 ## Created by
+
 Design and any crafted with 💜 by [Ihor Yanchuk](https://github.com/Vergos1). For more information or to view my other work, please visit [my portfolio](http://yanchuk.vinnytsia.ua/).
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

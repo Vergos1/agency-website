@@ -1,5 +1,5 @@
-@import "@/styles/mixins";
-@import "@/styles/variables";
+@import '@/styles/mixins';
+@import '@/styles/variables';
 
 .footer {
   min-width: 100%;
@@ -111,7 +111,7 @@
     position: relative;
 
     &:after {
-      content: "";
+      content: '';
       clear: both;
       position: absolute;
       display: block;
@@ -164,4 +164,3 @@
     @include gap(6px);
   }
 }
-

@@ -1,5 +1,6 @@
 import { AppRoutes } from '../types/app.types';
 import {
+  CommentsDataType,
   FeaturesDataType,
   FooterLinksType,
   PortfolioDataType,
@@ -174,5 +175,88 @@ export const questionsListSecondPart = [
       'How long does it take to receive the edited photos after a session?',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut I specialize in [Portrait, Landscape, Event, etc.] photography, capturing moments that tell unique stories.',
+  },
+];
+
+export const commentsData: CommentsDataType[] = [
+  {
+    id: 1,
+    name: 'Emily Johnson',
+    location: 'USA, California',
+    stars: 5,
+    comment:
+      "Damien's photography doesn't just capture moments; it captures emotions. Hes work is simply mesmerizing.",
+  },
+  {
+    id: 2,
+    name: 'Michael Smith',
+    location: 'Canada, Toronto',
+    stars: 5,
+    comment:
+      "I've never seen such vibrant and captivating photos. Damien truly has an eye for detail and beauty.",
+  },
+  {
+    id: 3,
+    name: 'Sophia Williams',
+    location: 'UK, London',
+    stars: 4,
+    comment:
+      "Damien's work is outstanding. Each photo tells a story, and the quality is impeccable. Highly recommended!",
+  },
+  {
+    id: 4,
+    name: 'James Brown',
+    location: 'Australia, Sydney',
+    stars: 5,
+    comment:
+      "Absolutely stunning work! Damien captures the essence of every moment perfectly. I'm beyond impressed.",
+  },
+  {
+    id: 5,
+    name: 'Olivia Davis',
+    location: 'New Zealand, Auckland',
+    stars: 4,
+    comment:
+      "Damien's photography is a true work of art. The emotions conveyed through his lens are powerful and moving.",
+  },
+  {
+    id: 6,
+    name: 'William Martinez',
+    location: 'USA, New York',
+    stars: 5,
+    comment:
+      "Incredible talent! Damien's photos are breathtaking and unique. Each shot is a masterpiece.",
+  },
+  {
+    id: 7,
+    name: 'Isabella Garcia',
+    location: 'Spain, Madrid',
+    stars: 4,
+    comment:
+      "The quality and creativity of Damien's photography are exceptional. His work stands out in every way.",
+  },
+  {
+    id: 8,
+    name: 'Alexander Lee',
+    location: 'South Korea, Seoul',
+    stars: 5,
+    comment:
+      "Damien's photography is simply mesmerizing. The way he captures light and emotion is truly special.",
+  },
+  {
+    id: 9,
+    name: 'Mia Rodriguez',
+    location: 'Mexico, Mexico City',
+    stars: 4,
+    comment:
+      'Beautiful and captivating photos! Damien has a remarkable ability to tell a story through his photography.',
+  },
+  {
+    id: 10,
+    name: 'Ethan Wilson',
+    location: 'Germany, Berlin',
+    stars: 5,
+    comment:
+      "Damien's work is a perfect blend of artistry and technical skill. Every photo is a joy to behold.",
   },
 ];

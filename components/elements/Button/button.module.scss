@@ -1,5 +1,5 @@
-@import "@/styles/_variables";
-@import "@/styles/_mixins";
+@import '@/styles/_variables';
+@import '@/styles/_mixins';
 
 .button {
   @include flex-center;
@@ -17,14 +17,18 @@
 .primary {
   background-color: $button-white;
   color: $text-black;
-  @include transition($transition-background-link, $transition-border-link);
+  @include transition(
+    $transition-background-link,
+    $transition-border-link
+  );
 
   &:hover {
     border: 1px solid $border-white;
     background-color: transparent;
     color: $text-white;
 
-    path, svg {
+    path,
+    svg {
       fill: $icon-white;
     }
   }
@@ -34,9 +38,13 @@
   border: 1px solid $border-white;
   background-color: transparent;
   color: $text-white;
-  @include transition($transition-background-link, $transition-border-link);
+  @include transition(
+    $transition-background-link,
+    $transition-border-link
+  );
 
-  path, svg {
+  path,
+  svg {
     fill: $icon-white;
   }
 
@@ -44,7 +52,8 @@
     background-color: $button-white;
     color: $text-black;
 
-    path, svg {
+    path,
+    svg {
       fill: $icon-black;
     }
   }

@@ -1,18 +1,18 @@
-@import "@/styles/variables.scss";
-@import "@/styles/mixins.scss";
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
 
 .portfolio {
-    min-height: calc(100vh - 71px);
-    width: 100%;
-    max-width: 1920px;
-    border-bottom: 1px solid $border-graphite;
-    overflow: hidden;
+  min-height: calc(100vh - 71px);
+  width: 100%;
+  max-width: 1920px;
+  border-bottom: 1px solid $border-graphite;
+  overflow: hidden;
 
-    @include large-desktop {
-        min-height: auto;
-    }
+  @include large-desktop {
+    min-height: auto;
+  }
 }
 
 .wrapper {
-    @include gap(20px);
+  @include gap(20px);
 }

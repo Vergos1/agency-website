@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import s from './sectionHeader.module.scss';
-import Title, { TitleProps } from '@/components/Title/Title';
+import Title, { TitleProps } from '@/components/elements/Title/Title';
 import Button, {
   ButtonProps,
 } from '@/components/elements/Button/Button';

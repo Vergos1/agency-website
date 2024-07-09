@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 //doc: === flex mixins === //
 @mixin flex-column {
@@ -73,10 +73,13 @@
   text-transform: uppercase;
 }
 
-
 //doc: === font-size mixin === //
 
-@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
+@mixin font-size(
+  $font-size,
+  $line-height: normal,
+  $letter-spacing: normal
+) {
   font-size: $font-size * 1px;
   // font-size: $font-size * 0.1rem;
   // example using rem values and 62.5% font-size so 1rem = 10px
@@ -103,23 +106,22 @@
 //  letter-spacing: 0.1em;
 //}
 
-
 //doc: === font-face mixin === //
 
 @mixin font-face($name, $file) {
   @font-face {
-    font-family: "#{$name}";
-    src: url("../fonts/#{$file}.eot");
-    src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/#{$file}.woff") format("woff"),
-    url("../fonts/#{$file}.ttf") format("truetype"),
-    url("../fonts/#{$file}.svg?#webfont") format("svg");
+    font-family: '#{$name}';
+    src: url('../fonts/#{$file}.eot');
+    src:
+      url('../fonts/#{$file}.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/#{$file}.woff') format('woff'),
+      url('../fonts/#{$file}.ttf') format('truetype'),
+      url('../fonts/#{$file}.svg?#webfont') format('svg');
   }
 }
 
 /* ===== Usage ===== */
 //@include font-face("MyFont", "myfont");
-
 
 //doc === cover-background mixin === //
 @mixin cover-background {
@@ -133,7 +135,6 @@
 //  background-images: url("cute-doggo.png");
 //  @include cover-background;
 //}
-
 
 //doc === media queries mixin === //
 
@@ -186,7 +187,6 @@
 //  }
 //}
 
-
 //doc === z-index mixin === //
 $elements: landing, header, modal, very-important-modal;
 
@@ -194,33 +194,40 @@ $elements: landing, header, modal, very-important-modal;
   z-index: index($elements, $id);
 }
 
-
 //doc === fade mixin === //
 //Quick mixin to hide or show an element, useful for fade in/out animations
 @mixin fade($type) {
-  @if $type== "hide" {
+  @if $type== 'hide' {
     visibility: hidden;
     opacity: 0;
-    transition: visibility 1s, opacity 1s;
-  } @else if $type== "show" {
+    transition:
+      visibility 1s,
+      opacity 1s;
+  } @else if $type== 'show' {
     visibility: visible;
     opacity: 1;
-    transition: visibility 1s, opacity 1s;
+    transition:
+      visibility 1s,
+      opacity 1s;
   }
 }
 
-
 //doc === skew-background mixin === //
 //link: https://codepen.io/alemesa/embed/XWbXLNK?height=600&default-tab=result&embed-version=2#result-box
-@mixin skew-background-transition($initial, $hover, $inverted: false) {
+@mixin skew-background-transition(
+  $initial,
+  $hover,
+  $inverted: false
+) {
   background-size: 200% 100%;
   background: linear-gradient(
-        90deg,
-        $hover 0%,
-        $hover 50%,
-        $initial 50%,
-        $initial 100%
-  ) no-repeat right bottom;
+      90deg,
+      $hover 0%,
+      $hover 50%,
+      $initial 50%,
+      $initial 100%
+    )
+    no-repeat right bottom;
   @if $inverted {
     background-position: left bottom;
   }
@@ -239,12 +246,11 @@ $elements: landing, header, modal, very-important-modal;
 //  @include skew-background-transition(#f00, #0f0);
 //}
 
-
 //doc === clearfix mixin === //
 @mixin clearfix() {
   &:before,
   &:after {
-    content: "";
+    content: '';
     display: table;
   }
   &:after {
@@ -257,7 +263,6 @@ $elements: landing, header, modal, very-important-modal;
 //  @include clearfix;
 //}
 
-
 //doc === box-sizing mixin === //
 @mixin box-sizing($box-model) {
   -webkit-box-sizing: $box-model; // Safari <= 5
@@ -269,7 +274,6 @@ $elements: landing, header, modal, very-important-modal;
 //div {
 //  @include box-sizing(border-box);
 //}
-
 
 //doc === border-radius mixin === //
 @mixin border-radius($radius) {
@@ -285,7 +289,6 @@ $elements: landing, header, modal, very-important-modal;
 //  @include border-radius(5px);
 //}
 
-
 //doc === opacity mixin === //
 @mixin opacity($opacity) {
   opacity: $opacity;
@@ -298,7 +301,6 @@ $elements: landing, header, modal, very-important-modal;
 //  @include opacity(0.5);
 //}
 
-
 //doc === center-block mixin === //
 @mixin center-block {
   display: block;
@@ -310,7 +312,6 @@ $elements: landing, header, modal, very-important-modal;
 //div {
 //  @include center-block;
 //}
-
 
 //doc === input-placeholder mixin === //
 @mixin input-placeholder {
@@ -338,17 +339,16 @@ $elements: landing, header, modal, very-important-modal;
 //  }
 //}
 
-
 //doc === mq mixin === //
 $breakpoints: (
-   "phone": 400px,
-   "phone-wide": 480px,
-   "phablet": 560px,
-   "tablet-small": 640px,
-   "tablet": 768px,
-   "tablet-wide": 1024px,
-   "desktop": 1248px,
-   "desktop-wide": 1440px
+  'phone': 400px,
+  'phone-wide': 480px,
+  'phablet': 560px,
+  'tablet-small': 640px,
+  'tablet': 768px,
+  'tablet-wide': 1024px,
+  'desktop': 1248px,
+  'desktop-wide': 1440px,
 );
 @mixin mq($width, $type: min) {
   @if map_has_key($breakpoints, $width) {
@@ -369,7 +369,6 @@ $breakpoints: (
 //  }
 //}
 
-
 //doc === truncate mixin === //
 @mixin truncate($truncation-boundary) {
   max-width: $truncation-boundary;
@@ -382,7 +381,6 @@ $breakpoints: (
 //div {
 //  @include truncate(100px);
 //}
-
 
 //doc === css3-prefix mixin === //
 @mixin css3-prefix($prop, $value) {
@@ -397,7 +395,6 @@ $breakpoints: (
 //div {
 //  @include css3-prefix(border-radius, 5px);
 //}
-
 
 //doc === keyframes mixin === //
 @mixin keyframes($animation-name) {
@@ -439,7 +436,6 @@ $breakpoints: (
 //  @include animation('fade-out 5s 3');
 //}
 
-
 //doc === abs-position mixin === //
 @mixin abs-position($top, $right, $bottom, $left) {
   position: absolute;
@@ -474,7 +470,6 @@ $breakpoints: (
 //div {
 //  @include transform(rotate(45deg));
 //}
-
 
 //doc === overlay mixin === //
 @mixin overlay() {
