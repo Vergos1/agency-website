@@ -1,0 +1,19 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.questions {
+    min-height: calc(100vh - 71px);
+    width: 100%;
+    max-width: 1920px;
+    border-bottom: 1px solid $border-graphite;
+    overflow: hidden;
+
+    @include large-desktop {
+        min-height: auto;
+    }
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}

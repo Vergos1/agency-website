@@ -1,0 +1,104 @@
+// >>>> default colors <<<<
+$white: #ffffff;
+$grey: #B0B0B0;
+$light-grey: #E4E4E6;
+$dark-grey: #7B7B7B;
+$ultra-dark-grey: #1D1D1D;
+$black-ultra-dark-grey: #1E1E1E;
+$graphite: #1C1C21;
+$blue: #82d2e5;
+$black: #262626;
+$ultra-black: #090909;
+$black-opacity-medium: rgba(0, 0, 0, 0.5);
+
+// >>>> text colors <<<<
+$text-white: $white;
+$text-light-grey: $light-grey;
+$text-grey: $grey;
+$text-dark-grey: $dark-grey;
+$text-blue: $blue;
+$text-black: $black;
+
+// >>>> input text colors <<<<
+$input-white: $white;
+$input-black: $black;
+
+// >>>> links text colors <<<<
+$link-secondary: $blue;
+$link-tertiary: $grey;
+$link-white: $white;
+
+
+// >>>> button text colors <<<<
+$button-white: $white;
+$button-black: $black;
+
+// >>>> backgrounds colors <<<<
+$background-black: $black;
+$background-white: $white;
+$background-grey: $grey;
+$background-ultra-black: $ultra-black;
+$background-ultra-black-opacity-medium: $black-opacity-medium;
+
+// >>>> icon colors <<<<
+$icon-white: $white;
+$icon-black: $black;
+
+// >>>> border colors <<<<
+$border-white: $white;
+$border-black: $black;
+$border-grey: $grey;
+$border-graphite: $graphite;
+$border-ultra-dark-grey: $ultra-dark-grey;
+
+// >>>> link transitions <<<<
+$transition-default: 0.15s ease-in-out;
+$transition-default-default: 0.25s ease-in-out;
+$transition-link: 0.15s ease-in-out;
+$transition-background-link: background-color 0.25s ease-in-out;
+$transition-border-link: border 0.25s ease-in-out;
+$transition-color-link: color 0.25s ease-in-out;
+$transition-block: all 0.35s ease-in-out;
+$transition-all-link: all 0.25s ease-in-out;
+
+// >>>> font-size <<<<
+$font-size-ultra-small: 12px;
+$font-size-small: 14px;
+$font-size-medium: 16px;
+$font-size-large: 18px;
+$font-size-ultra-large: 20px;
+$font-size-giant: 22px;
+$font-size-huge: 24px;
+$font-size-ultra-huge: 32px;
+$font-size-massive: 48px;
+$font-size-gigantic: 84px;
+$font-size-titanic: 124px;
+
+// >>>> font-weight <<<<
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;
+
+// >>>> radius <<<<
+$radius-button: 5px;
+$radius-tab: 5px;
+
+// >>>> z-index <<<<
+$z-index-first: 1;
+$z-index-second: 2;
+$z-index-third: 3;
+$z-index-fourth: 4;
+$z-index-modal: 5;
+$z-index-modal-second: 6;
+$z-index-modal-third: 7;
+$z-index-very-important: 8;
+
+
+// >>>> fonts <<<<
+$font-helvetica-neue: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-helvetica-cyrill: 'Helvetica CY', Helvetica, Arial, sans-serif;
+$font-poppins: 'Poppins', sans-serif;

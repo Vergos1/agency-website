@@ -1,0 +1,51 @@
+@import "@/styles/_variables";
+@import "@/styles/_mixins";
+
+.button {
+  @include flex-center;
+  gap: 10px;
+  padding: 12px 24px;
+  font-family: $font-helvetica-cyrill;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-regular;
+  text-transform: uppercase;
+  cursor: pointer;
+  min-width: max-content;
+  border: 1px solid transparent;
+}
+
+.primary {
+  background-color: $button-white;
+  color: $text-black;
+  @include transition($transition-background-link, $transition-border-link);
+
+  &:hover {
+    border: 1px solid $border-white;
+    background-color: transparent;
+    color: $text-white;
+
+    path, svg {
+      fill: $icon-white;
+    }
+  }
+}
+
+.secondary {
+  border: 1px solid $border-white;
+  background-color: transparent;
+  color: $text-white;
+  @include transition($transition-background-link, $transition-border-link);
+
+  path, svg {
+    fill: $icon-white;
+  }
+
+  &:hover {
+    background-color: $button-white;
+    color: $text-black;
+
+    path, svg {
+      fill: $icon-black;
+    }
+  }
+}

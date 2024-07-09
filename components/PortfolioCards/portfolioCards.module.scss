@@ -1,0 +1,39 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.wrapper {
+    @include gap(50px);
+    row-gap: 70px;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+        place-items: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.item {
+    @include gap(24px);
+    width: max-content;
+
+    .title {
+        font-size: $font-size-large;
+        font-style: normal;
+        font-weight: $font-weight-regular;
+        line-height: 20px;
+        color: $text-white;
+        margin-bottom: 10px;
+    }
+
+    .description {
+        font-size: $font-size-medium;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        line-height: 18px;
+        color: $text-light-grey;
+    }
+}

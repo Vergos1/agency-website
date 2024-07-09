@@ -1,0 +1,96 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.menuButton {
+  @include flex-center;
+  gap: 2px;
+  font-size: $font-size-small;
+  font-style: normal;
+  font-weight: $font-weight-regular;
+  line-height: normal;
+  text-transform: uppercase;
+  position: relative;
+  z-index: $z-index-very-important;
+
+  &:hover .bar:nth-child(2) {
+    width: 100%;
+  }
+
+  &:hover .bar:nth-child(3) {
+    width: 100%;
+  }
+}
+
+.menuIcon {
+  max-width: 24px;
+}
+
+.menuInput {
+  max-height: 17px;
+}
+
+.burgerIcon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin: 7px auto 0 auto;
+  @include transition(all 0.15s ease-out);
+  cursor: pointer;
+
+  .bar {
+    @include transition(all 0.15s ease-out);
+    height: 1.7px;
+    width: 100%;
+    display: block;
+    background-color: $background-white;
+
+    &:nth-child(2) {
+      margin: 2px 0;
+    }
+  }
+}
+
+.closed {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+
+  .bar:nth-child(2) {
+    height: 1.5px;
+    width: 18.5px;
+    -webkit-transition-property: margin, height, width;
+    transition-property: margin, height, width;
+    -webkit-transition-delay: 0.15s, 0.15s, 0s;
+    transition-delay: 0.15s, 0.15s, 0s;
+  }
+
+  .bar:nth-child(3) {
+    height: 1.5px;
+    width: 20.5px;
+  }
+}
+
+.opened {
+  padding-top: 3.5px;
+
+  .bar:nth-child(1) {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+    height: 1.8px;
+  }
+
+  .bar:nth-child(2) {
+    opacity: 0;
+    height: 0;
+    margin: -2px 0px;
+  }
+
+  .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+    height: 1.8px;
+  }
+}
