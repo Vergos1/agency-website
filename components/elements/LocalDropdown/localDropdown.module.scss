@@ -2,41 +2,41 @@
 @import "@/styles/variables";
 
 .dropdown {
-  position: relative;
-  z-index: $z-index-very-important;
+    position: relative;
+    z-index: $z-index-very-important;
 }
 
 .icon {
-  cursor: pointer;
-  @include transition($transition-default);
+    cursor: pointer;
+    @include transition($transition-default);
 }
 
 .dropdownButton {
-  padding: 0 4px;
-  @include flex-center;
-  gap: 2px;
-  font-size: $font-size-small;
-  font-style: normal;
-  font-weight: $font-weight-medium;
-  line-height: normal;
-  text-transform: uppercase;
-}
-
-.list {
-  background: $background-ultra-black;
-  border: 1px solid $border-grey;
-  @include gap(4px);
-  padding: 4px;
-  text-align: left;
-  position: absolute;
-  top: 22px;
-  left: 0;
-
-  .button {
+    padding: 0 4px;
+    @include flex-center;
+    gap: 2px;
     font-size: $font-size-small;
     font-style: normal;
     font-weight: $font-weight-medium;
     line-height: normal;
     text-transform: uppercase;
-  }
+}
+
+.list {
+    background: $background-ultra-black;
+    border: 1px solid $border-grey;
+    @include gap(4px);
+    padding: 4px;
+    text-align: left;
+    position: absolute;
+    top: 22px;
+    left: 0;
+
+    .button {
+        font-size: $font-size-small;
+        font-style: normal;
+        font-weight: $font-weight-medium;
+        line-height: normal;
+        text-transform: uppercase;
+    }
 }

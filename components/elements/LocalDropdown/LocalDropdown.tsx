@@ -1,9 +1,8 @@
 'use client';
 import React, { useRef, useState } from 'react';
 import s from './localDropdown.module.scss';
-import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import useClickAway from '@/utils/hooks/useOutsideClick';
+import useClickAway from '@/utils/hooks/useClickAway';
 import ChevronIcon from '@/assets/icons/chevron.svg';
 
 const languages: string[] = ['ua', 'en'];

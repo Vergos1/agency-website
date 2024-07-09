@@ -1,0 +1,44 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+
+.title {
+    font-family: $font-helvetica-cyrill;
+    font-size: $font-size-ultra-large;
+    font-style: normal;
+    font-weight: $font-weight-medium;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.iconWrapper {
+    @include flex-center;
+    min-height: 52px;
+    min-width: 52px;
+    border-radius: 50%;
+    border: 2px solid $border-white;
+    @include transition($transition-default);
+}
+
+.header {
+    width: 100%;
+    @include flex-between;
+    gap: 40px;
+}
+
+.accordion {
+    height: max-content;
+    @include gap(32px);
+    width: 100%;
+    padding: 32px;
+    border: 1px solid $border-ultra-dark-grey;
+}
+
+.description {
+    text-align: left;
+    font-family: $font-helvetica-cyrill;
+    font-size: $font-size-medium;
+    font-style: normal;
+    font-weight: $font-weight-regular;
+    line-height: 150%;
+}
