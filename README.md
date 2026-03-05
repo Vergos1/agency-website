@@ -1,63 +1,59 @@
-# BinPackager - Efficient Bin Packing Solution
+# Agency Website
 
-![BinPackager Preview](./src/assets/images/preview.jpg)
+Digital agency website built with Next.js, Framer Motion and SCSS.
 
-Welcome to the BinPackager project! This application optimizes the packing of different sized blocks into sheets, ensuring minimal wastage and efficient space usage.
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)
+![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat&logo=sass&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat&logo=framer&logoColor=white)
+
+## About
+
+Agency Website is a Next.js multi-page website for a digital agency. The project features animated sections powered by Framer Motion, video playback and a modern SCSS-based styling system.
+
+## Pages
+
+| Page | Description |
+|---|---|
+| **Home** | Main landing page with agency sections |
+| **Career** | Career opportunities |
+| **Privacy Policy** | Privacy policy page |
 
 ## Features
 
-- **Efficient Bin Packing Algorithm**: Implements a binary tree bin packing algorithm for optimal space utilization.
-- **Customizable Block and Sheet Sizes**: Users can define the sizes of blocks and sheets to fit their specific needs.
-- **Interactive UI**: A user-friendly interface built with React.js for a seamless experience.
+- **Framer Motion** — page and section animations
+- **Video Player** — embedded video via `react-player`
+- **SCSS** — modular styling with Sass
+- **Husky** — pre-commit hooks
+- **SVG support** — SVG as React components via `@svgr/webpack`
+- **Next.js App Router** — file-based routing
 
-## Technologies Used
+## Tech Stack
 
-- **React.js**: For building a dynamic and responsive user interface.
-- **Typescript**: Ensuring type safety and better code management.
-- **SCSS**: For advanced styling of the application.
-- **VITE**: for efficient and fast project assembly.
-
-## Setup
-
-Clone the repository and run the following command to start the development server:
-[git clone https://github.com/Vergos1/pet-project_BinPackager.git](https://github.com/Vergos1/pet-project_BinPackager.git)
-
-## Created by
-Design and any crafted with 💜 by [Ihor Yanchuk](https://github.com/Vergos1). For more information or to view my other work, please visit [my portfolio](http://yanchuk.vinnytsia.ua/).
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+| Technology | Purpose |
+|---|---|
+| Next.js 14 | React framework |
+| TypeScript | Type safety |
+| SCSS / Sass | Styling |
+| Framer Motion | Animations |
+| React Player | Video playback |
+| Husky | Pre-commit hooks |
+| ESLint / Prettier | Code quality |
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Author
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Designed and developed by **Ihor Yanchuk**
+[Portfolio](https://github.com/Vergos1) · [GitHub](https://github.com/Vergos1)
