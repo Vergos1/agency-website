@@ -11,6 +11,8 @@ Digital agency website built with Next.js, Framer Motion and SCSS.
 
 Agency Website is a Next.js multi-page website for a digital agency. The project features animated sections powered by Framer Motion, video playback and a modern SCSS-based styling system.
 
+🔗 **Live:** [agency-website](https://agency-website-two-kohl.vercel.app/)
+
 ## Pages
 
 | Page | Description |
